@@ -25,6 +25,7 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage[T1]{fontenc}
 
 \pagestyle{empty} % Suppress page numbers
 
@@ -95,7 +96,8 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  %\MakeUppercase{\textbf{\textsc{#1}}} % Section title
+  \textsc{\textbf{\Large #1}} % Section title
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
@@ -129,3 +131,133 @@
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
 \def\sectionskip{\medskip} % The space after the heading section
+
+
+%%%%%%%%%%%%%%%%
+% Bibliography %
+%%%%%%%%%%%%%%%%
+
+\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+
+\DeclareFieldFormat[article]{title}{#1\par}
+\DeclareFieldFormat[book]{title}{#1\par}
+\DeclareFieldFormat[inproceedings]{title}{#1\par}
+\DeclareFieldFormat[misc]{title}{#1\par}
+\DeclareFieldFormat[report]{title}{#1\par}
+
+\DeclareBibliographyDriver{article}{%
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\usebibmacro{journal+issuetitle}%
+		\setunit{\space}%
+		\printfield{pages}%
+		\newunit%
+		\printlist{publisher}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{book}{%
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printlist{publisher}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit{\addcomma\space}%
+		\printlist{location}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
+}
+
+
+\DeclareBibliographyDriver{inproceedings}{%
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}%
+		\printfield{booktitle}%
+		\setunit{\addcomma\space}%
+		\printfield{year}%
+		\setunit{\addcomma\space}%
+		\printlist{location}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{misc}{%
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{booktitle}%
+		\setunit*{\addcomma\space}%
+		\printfield{note}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit{\addcomma\space}%
+		\printlist{location}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
+}
+
+\DeclareBibliographyDriver{report}{%
+	\printfield{title}%
+	\newblock%
+	\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{type}%
+		\setunit{\space}%
+		\printfield{number}%
+		\setunit{\addcomma\space}%
+		\printfield{year}%
+		\newunit%
+	}
+	\par\vspace{0.3\baselineskip}
+}
+
+\DeclareNameFormat{author}{%
+	\small\addfontfeature{Color=lightgray}%
+	\ifblank{#3}{}{#3\space}#1%
+	\ifthenelse{\value{listcount}<\value{liststop}}
+	{\addcomma\space}
+	{}%
+}
+
+\newcommand{\printbibsection}[2]{
+	\begin{refsection}
+		\nocite{*}
+		\printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
+	\end{refsection}
+}
+
+\DeclareSortingScheme{chronological}{
+	\sort[direction=descending]{\field{year}}
+	\sort[direction=descending]{\field{month}}
+}
