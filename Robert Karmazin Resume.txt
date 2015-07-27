@@ -1,0 +1,121 @@
+ROBERT KARMAZIN
+rob@csl.cornell.edu, 631 258 8961
+100 Graham Road, Apt 7H
+Ithaca, NY 14850
+
+
+RESEARCH INTERESTS
+
+Asynchronous circuits and systems, computer architecture, VLSI methodology, computer-aided design, hardware security, memory systems, optimization.
+
+
+EDUCATION
+
+Cornell University, Ithaca, New York
+Ph.D., Computer Engineering, minor in Computer Science
+M.S., Computer Engineering
+Advisor: Dr. Rajit Manohar
+Thesis:  Automating the Physical Design of Asynchronous Circuits
+GPA: 3.84
+
+The Johns Hopkins University,
+Baltimore, Maryland
+B.S., Dual Degree in Electrical Engineering and Computer Engineering
+Advisor: Dr. Ralph Etienne- Cummings
+May 2006
+GPA: 3.74
+
+
+SELECT RESEARCH PROJECTS
+
+ Split Foundry Programmable Characterizer Mesh, 28nm, 2015
+• Taped out programmable mesh to characterize cross- die process variation for split foundry manufacturing.
+• Expected throughput of approximately 2.5GHz.
+
+ Split Foundry Asynchronous FPGA, 65nm, 2014
+• Fabricated three asynchronous FPGAs, each with unique transistor- level obfuscation strategies, as part of IARPA TIC.
+• Achieved 550 MHz throughput.
+
+ Split Foundry Asynchronous FPGA, 130nm, 2013
+• Fabricated asynchronous FPGA as part of IARPA TIC program. Demonstrated usability of custom layout flow.
+• Achieved 270MHz throughput.
+
+ cellTK - Automated Layout Toolflow, 2013
+• Developed CAD software to automate the physical implementation of DRC clean custom asynchronous digital logic.
+• Generated custom gates that are compatible with existing cell- based place & route flows.
+
+ Ultra Low-Power Sensor Network Asynchronous Processor, 90nm, 2011
+• Designed and implemented chip IO for ULSNAP processor.
+• Implemented full custom layout for processor core and periphery.
+• Fabricated chip that achieved 97 MIPS at 4mW.
+
+ Hybrid FPGA, 65nm, 2010
+• Designed, validated, and implemented configuration memory for FPGA- processor hybrid as part of collaboration with Air Force Research Lab.
+• Achieved 700MHz throughput in extracted simulation.
+
+
+ PROFESSIONAL EXPERIENCE
+
+ ZMD- A, Melville, New York
+Engineering Intern, June 2006 - August 2006
+• Ported existing two- stage high- accuracy ADC design to new technology node.
+• Simulated various components to determine bandwidth and power improvements over original design.
+
+ The Johns Hopkins University Applied Physics Laboratory, Laurel, Maryland
+Undergraduate Intern, June 2005 - August 2005
+• Implemented various MATLAB functions and procedures in C to optimize execution time.
+• Augmented with additional type checking and interfacing to MATLAB programming environment.
+
+
+ PUBLICATIONS
+
+ Robert Karmazin, Stephen Longfield, Carlos Tadeo Ortega Otero, and Rajit Manohar. Timing Driven Placement for Quasi Delay- Insensitive Circuits. International Symposium on Asynchronous Circuits and Systems, May 2015.
+
+ Carlos Tadeo Ortega Otero, Jonathan Tse, Robert Karmazin, and Rajit Manohar. Automatic Obfuscated Cell Layout for Trusted Split- Foundry Design. International Symposium on Hardware-Oriented Security and Trust, May 2015.
+
+ Carlos Tadeo Ortega Otero, Jonathan Tse, Robert Karmazin, and Rajit Manohar. ULSNAP: An Ultra- Low Power Event-Driven Microcontroller for Sensor Network Nodes. International Symposium on Quality Electronic Design, March 2014.
+
+ Benjamin Hill, Robert Karmazin, Carlos Tadeo Ortega Otero, Jonathan Tse, and Rajit Manohar. A Split-Foundry Asynchronous FPGA. Custom Integrated Circuits Conference, September 2013.
+
+ Nabil Imam, Kyle Wecker, Jonathan Tse, Robert Karmazin, Carlos Tadeo Ortega Otero, and Rajit Manohar.  Neural Spiking Dynamics in Asynchronous Digital Circuits. International Joint Conference on Neural Networks, August 2013.
+
+ Robert Karmazin, Carlos Tadeo Ortega Otero, and Rajit Manohar. cellTK: Automated Layout for Asynchronous Circuits with Nonstandard Cells. International Symposium on Asynchronous Circuits and Systems, May 2013.
+
+ Janani Mukundan, Saugata Ghose, Robert Karmazin, Engin Ipek, and José Martínez. Overcoming Single-Thread Performance Hurdles in the Core Fusion Reconfigurable Multicore Architecture. International Conference on Supercomputing, June 2012.
+
+
+ PATENTS
+
+ Automated Layout for Integrated Circuits with Nonstandard Cells
+Rajit Manohar, Robert Karmazin, Carlos Tadeo Ortega Otero
+WIPO Patent Published WO 2014/186803 A1, 20 November 2014
+
+
+ TEACHING & MENTORING EXPERIENCE
+
+ Cornell University, Ithaca, New York
+Student Mentor May 2014 - August 2014
+• Guided M.Eng. student on developing hardware/software testing infrastructure for split- foundry asynchronous FPGA.
+• Work included designing PCB to interface test chip to Raspberry Pi, writing low level drivers for Raspberry Pi.
+
+ Cornell University, Ithaca, New York
+Student Advisor May 2011 - July 2011
+• Advised M.S. student on creating a channel router used for connecting multiple pipeline stages, optimized for total required routing area. Router capable of handling obstacles within routing channel.
+
+ Cornell University, Ithaca, New York
+Teaching Assistant August 2006 - December 2007
+• Led laboratory sessions for introductory digital logic and design course( ECE 230) over three semesters.
+• Held regular office hours and graded homework, reports, and exams.
+
+
+ SKILLS
+
+ Programming: C, C++, Python, MATLAB, Verilog, VHDL, Java, TCL
+ Design: Micromagic, Cadence Virtuoso, HSPICE, Calibre, Encounter, Eagle PCB
+ Platforms: Windows, Linux, Raspberry Pi, Arduino, PIC
+
+
+ SERVICE & AFFILIATIONS
+
+ External reviewer: ICCAD 2015, ASP- DAC 2015, ASYNC 2014, HPCA 2014, ASYNC 2013
+ Member: IEEE, Eta Kappa Nu, Tau Beta Pi
